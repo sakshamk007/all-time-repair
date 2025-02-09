@@ -7,16 +7,33 @@
     <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
     <title>All Time Repair</title>
 </head>
-<body class="bg-black text-white p-2">
-    <nav class="flex justify-between items-center px-4">
+<body class="bg-black text-white p-2 flex flex-col gap-10">
+    <nav class="flex justify-between items-center px-8">
         <img src="../assets/logo.png" alt="" width="150px">
         <ul class="bg-gray-950 text-green-600 flex gap-10 text-3xl p-4 border rounded-lg">
-            <li>Home</li>
-            <li>Services</li>
-            <li>About</li>
-            <li>Contact</li>
+            <button class="transform transition-transform duration-150 ease-in-out active:scale-95 cursor-pointer hover:text-white">Home</button>
+            <button class="transform transition-transform duration-150 ease-in-out active:scale-95 cursor-pointer hover:text-white">Services</button>
+            <button class="transform transition-transform duration-150 ease-in-out active:scale-95 cursor-pointer hover:text-white">About</button>
+            <button class="transform transition-transform duration-150 ease-in-out active:scale-95 cursor-pointer hover:text-white">Contact</button>
         </ul>
         <img src="../assets/logo.png" alt="" width="150px">
     </nav>
+    <main class="px-26 flex flex-col gap-10">
+        <div class="flex">
+            <img src="../assets/hero.jpg" alt="" width="400px" class="rounded-l-4xl">
+            <div class="bg-gray-950 p-10 flex flex-col gap-12 border-t border-r border-b rounded-r-4xl">
+                <p class="text-2xl text-center">24/7 Roadside Assistance for Trucks & Trailers</p>
+                <div>
+                    <p class="text-4xl">Broken down? Don't worry, we've got you covered!</p>
+                    <p class="text-4xl">Fast, reliable and professional roadside assistance to keep your fleet moving.</p>
+                </div>
+                <p class="text-3xl">Call Now for Immediate Help - <button class="bg-gradient-to-b from-green-600 to-green-800 hover:text-white rounded-full text-black p-2 transform transition-transform duration-150 ease-in-out active:scale-95 cursor-pointer">+1-925-307-4213</button></p>
+            </div>
+        </div>
+        <div class="flex gap-8 justify-center items-center">
+            <button class="bg-gradient-to-b from-green-600 to-green-800 hover:text-white text-black text-3xl rounded-full py-2 px-4 transform transition-transform duration-150 ease-in-out active:scale-95 cursor-pointer">Book Service</button>
+            <button class="bg-gradient-to-b from-green-600 to-green-800 hover:text-white text-black text-3xl rounded-full py-2 px-4 transform transition-transform duration-150 ease-in-out active:scale-95 cursor-pointer">Contact Us</button>
+        </div>
+    </main>
 </body>
 </html>
