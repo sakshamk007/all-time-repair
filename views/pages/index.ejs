@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <title>All Time Repair</title>
 </head>
+
 <link rel="stylesheet" href="./style.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -35,20 +37,16 @@
 
 <body class="bg-neutral-950 max-w-7xl mx-auto">
     <header>
-        <%- include('../partials/head'); %>
+        <%- include('../partials/header'); %>
     </header>
     <main>
         <section
             class="text-center text-neutral-50 grid grid-cols-1 md:grid-cols-2 items-center px-8 py-10 gap-12 pb-20 border-b border-neutral-800">
             <div id="text-content" class="text-left">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">ALLTIME REPAIR</h2>
-                <h1 class="text-3xl md:text-4xl lg:text-6xl font-extrabold mb-4 leading-tight">Heavy-Duty Truck Repair
-                    Shop & Fleet Services</h1>
-                <p class="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed">At Gallaher Fleet Solutions, we proudly
-                    provide top-rated heavy-duty diesel truck repair & fleet services from our two repair shop locations
-                    in Statesville & Bessember City, North Carolina. We strive to build business relationships based on
-                    integrity and quality workmanship — without dealership prices.</p>
-                <a href="tel:+1234567890"
+                <h2 class="text-xl md:text-xl lg:text-2xl font-bold mb-4 uppercase tracking-wider">ALLTIME REPAIR</h2>
+                <h1 class="text-2xl md:text-2xl lg:text-4xl font-extrabold mb-4 leading-tight">24/7 Roadside Assistance for Trucks & Trailers</h1>
+                <p class="text-xl md:text-xl lg:text-2xl mb-8 leading-relaxed">Broken down? Don't worry, we've got you covered! Fast, reliable and professional roadside assistance to keep your fleet moving.</p>
+                <a href="tel:+19253074213"
                     class="text-neutral-50 font-black px-12 py-3 text-lg bg-lime-500 rounded-lg flex w-fit items-center hover:bg-lime-600 transition duration-300 transform hover:scale-105">
                     <span class="material-icons mr-2">phone</span>Call Us
                 </a>
@@ -67,15 +65,14 @@
                     </div>
                 </div>
             </div>
-            <div id="image-content" class="animate-fade-in-up">
+            <div id="image-content" class="animate-fade-in-up flex justify-center items-center">
                 <img src="./hero.jpeg" alt="Placeholder Image"
-                    class="rounded-full w-full h-auto max-w-xl border-l-2 border-b-2 border-lime-500 shadow-2xl">
+                    class="rounded-full w-full h-auto max-w-lg lg:w-[60%] border-l-2 border-b-2 border-lime-500 shadow-2xl">
             </div>
         </section>
         <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase tracking-wider">Our Services</h2>
-            <p class="text-lg md:text-xl lg:text-2xl leading-relaxed mb-8">We are certified to provide the highest
-                quality service and ensure your fleet is always on the road.</p>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">Our Services</h2>
+            <p class="text-md md:text-lg lg:text-xl leading-relaxed mb-8">Explore our full range of professional services designed to meet all your fleet needs.</p>
             <div class="grid grid-cols-1 md:grid-cols-2  gap-8 mt-8">
                 <div class="bg-neutral-900 rounded-lg shadow-lg flex">
                     <div id="service-image" class="">
@@ -83,7 +80,7 @@
                     </div>
                     <div id="service-text "class="text-left p-4 flex flex-col justify-between">
                         <div id="info-head">
-                            <h3 class="text-2xl font-bold mb-2">Service 1</h3>
+                            <h3 class="text-2xl font-bold mb-2">Brake Repair</h3>
                             <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
                                 satisfaction.</p>
                             </div>
@@ -95,35 +92,251 @@
                             </div>
                     </div>
                 </div>
-                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg">
-                    <img src="./service2.jpg" alt="Service 2" class="w-full h-48 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-2xl font-bold mb-2">Service 2</h3>
-                    <p class="text-lg mb-4">Description of Service 2. We provide top-notch service to ensure your
-                        satisfaction.</p>
-                    <a href="#"
-                        class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
-                        More</a>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Coolant System Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
                 </div>
-                <div class="bg-neutral-900 p-6 rounded-lg shadow-lg">
-                    <img src="./service3.jpg" alt="Service 3" class="w-full h-48 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-2xl font-bold mb-2">Service 3</h3>
-                    <p class="text-lg mb-4">Description of Service 3. We provide top-notch service to ensure your
-                        satisfaction.</p>
-                    <a href="#"
-                        class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
-                        More</a>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">DOT Inspection</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Diagnostics & Electrical Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Driveline Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">EGR & DPF Cleaning</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Engine Repair, Overhaul & Conversion</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Exhaust System Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">HVAC System Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Mobile Truck Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Oil & Fluid</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Preventive Maintenance</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Suspension Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-900 rounded-lg shadow-lg flex">
+                    <div id="service-image" class="">
+                        <img src="./mechanic.jpeg" alt="Service 1" class="h-full w-full object-cover rounded-t-lg mb-4 overflow-hidden">
+                    </div>
+                    <div id="service-text "class="text-left p-4 flex flex-col justify-between">
+                        <div id="info-head">
+                            <h3 class="text-2xl font-bold mb-2">Transmission Repair</h3>
+                            <p class="text-lg mb-4">Description of Service 1. We provide top-notch service to ensure your
+                                satisfaction.</p>
+                            </div>
+                            <div id="info-cta">
+
+                                <a href="#"
+                                class="text-neutral-50 font-black px-6 py-2 text-lg bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform hover:scale-105">Learn
+                                More</a>
+                            </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
             <div class="mb-8">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase tracking-wider">Our Certification
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">Our Certification
                 </h2>
-                <p class="text-lg md:text-xl lg:text-2xl leading-relaxed">We are certified to provide the highest
+                <p class="text-md md:text-lg lg:text-xl leading-relaxed">We are certified to provide the highest
                     quality service and ensure your fleet is always on the road.</p>
             </div>
-            <div>
-                <img src="./image.png" alt="Commitment Image" class="w-full h-auto  rounded-xl">
+            <div class="flex justify-center items-center">
+                <img src="./certificate.png" alt="Commitment Image" class="w-full h-auto lg:w-[80%] rounded-xl">
             </div>
         </section>
     </main>
@@ -131,22 +344,21 @@
     <footer>
     </footer>
     <footer class=" text-neutral-50 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col gap-4 md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
                 <img src="./logo.png" alt="Company Logo" class="w-16 h-16 mr-4">
                 <div>
                     <h3 class="text-2xl font-bold">ALLTIME REPAIR</h3>
-                    <p class="text-sm">Heavy-Duty Truck Repair & Fleet Services</p>
+                    <p class="text-sm">24/7 Roadside Assistance for Trucks & Trailers</p>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row gap-4">
-                <a href="#" class="text-neutral-50 hover:text-lime-500 transition duration-300">Home</a>
-                <a href="#" class="text-neutral-50 hover:text-lime-500 transition duration-300">About Us</a>
-                <a href="#" class="text-neutral-50 hover:text-lime-500 transition duration-300">Services</a>
-                <a href="#" class="text-neutral-50 hover:text-lime-500 transition duration-300">Contact</a>
+            <div class="flex flex-row gap-8">
+                <a href="#"><img src="./instagram.svg" alt="instagram" class="h-[25px]"></a>
+                <a href="#"><img src="./facebook.svg" alt="facebook" class="h-[25px]"></a>
+                <a href="#"><img src="./twitter.svg" alt="twitter" class="h-[25px]"></a>
             </div>
             <div class="text-sm text-neutral-400 mt-4 md:mt-0">
-                <p>&copy; 2023 ALLTIME REPAIR. All rights reserved.</p>
+                <p>&copy; 2025 ALLTIME REPAIR. All rights reserved.</p>
             </div>
         </div>
     </footer>
