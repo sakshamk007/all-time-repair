@@ -1,0 +1,88 @@
+<nav class="relative"></nav>
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between  md:h-auto border-b border-neutral-800 ">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="#" class="text-xl font-bold text-green-800 transition duration-300 hover:text-green-600">
+                    <img src="./logo.png" alt="" class="w-auto h-52">
+                </a>
+            </div>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <div class="flex items-center md:hidden">
+                <label for="check" class="cursor-pointer flex flex-col gap-1.5 w-8 h-8 items-center justify-center">
+                    <input type="checkbox" id="check" class="hidden" />
+                    <span class="w-7 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300 origin-center"></span>
+                    <span class="w-5 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300"></span>
+                    <span class="w-7 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300 origin-center"></span>
+                </label>
+            </div>
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex md:items-center md:space-x-4">
+                <a href="#"
+                    class="text-lime-500 px-3 py-2 text-lg font-medium  hover:border-b-2 hover:border-lime-500 hover:pb-1 transition-colors ease-in ">Home</a>
+                <a href="#"
+                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1">About</a>
+                <a href="#"
+                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1">Services</a>
+                <a href="#"
+                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1">Contact</a>
+            </div>
+        <!-- Contact Buttons -->
+        <div class="hidden md:flex md:items-center md:space-x-4">
+            <a href="tel:+1234567890"
+                class="text-neutral-100 px-5 py-2 text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
+                <span class="material-icons mr-2">phone</span>Call Us
+            </a>
+            <a href="mailto:info@example.com"
+                class="text-neutral-100 px-5 py-2 text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
+                <span class="material-icons mr-2">email</span>Message Us
+            </a>
+        </div>
+    
+        </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="absolute top-40 left-0 w-full bg-gray-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#"
+                class="block text-green-800 hover:text-green-600 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Home</a>
+            <a href="#"
+                class="block text-green-800 hover:text-green-600 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">About</a>
+            <a href="#"
+                class="block text-green-800 hover:text-green-600 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Services</a>
+            <a href="#"
+                class="block text-green-800 hover:text-green-600 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- JavaScript for Hamburger Menu -->
+<script>
+    const check = document.getElementById('check');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const spans = document.querySelectorAll('label span');
+
+    check.addEventListener('change', () => {
+        // Toggle mobile menu
+        if (check.checked) {
+            mobileMenu.classList.remove('max-h-0', 'opacity-0', 'scale-95');
+            mobileMenu.classList.add('max-h-screen', 'opacity-100', 'scale-100');
+        } else {
+            mobileMenu.classList.add('max-h-0', 'opacity-0', 'scale-95');
+            mobileMenu.classList.remove('max-h-screen', 'opacity-100', 'scale-100');
+        }
+
+        // Hamburger animation
+        if (check.checked) {
+            spans[0].classList.add('rotate-45', 'translate-y-[8.5px]');
+            spans[1].classList.add('opacity-0');
+            spans[2].classList.add('-rotate-45', '-translate-y-[8.5px]');
+        } else {
+            spans[0].classList.remove('rotate-45', 'translate-y-[8.5px]');
+            spans[1].classList.remove('opacity-0');
+            spans[2].classList.remove('-rotate-45', '-translate-y-[8.5px]');
+        }
+    });
+</script>
