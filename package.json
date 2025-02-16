@@ -2,7 +2,7 @@
   "name": "all-time-repair",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npx @tailwindcss/cli -i ./public/input.css -o ./public/style.css --watch\" \"node index.js\""
+    "dev": "concurrently \"npx @tailwindcss/cli -i ./public/input.css -o ./public/style.css --watch\" \"nodemon index.js\""
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.6",
