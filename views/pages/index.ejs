@@ -22,55 +22,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
     <title>ALLTIME REPAIR</title>
-</head>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<link rel="stylesheet" href="./style.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-<style>
-    @keyframes fadeIn {
-        from {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        /* Initially hide elements */
+        [data-animate] {
             opacity: 0;
-            transform: translateY(20px);
+        }
+        @keyframes upDown {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(10px);
+            }
         }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        .limited-animation {
+            animation: upDown 2s infinite alternate;
+            animation-iteration-count: 6; 
+            /* Change this number to the desired number of iterations */
         }
-    }
-
-    .animate-fade-in {
-        animation: fadeIn 0.5s ease-out forwards;
-    }
-
-    /* Initially hide elements */
-    [data-animate] {
-        opacity: 0;
-    }
-    @keyframes upDown {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-        100% {
-            transform: translateY(10px);
-        }
-    }
-
-    .limited-animation {
-        animation: upDown 2s infinite alternate;
-        animation-iteration-count: 6; 
-        /* Change this number to the desired number of iterations */
-    }
-</style>
+    </style>
 </head>
 
-<body class="relative bg-neutral-950 max-w-7xl mx-auto border border-white">
+<body class="relative bg-neutral-950 max-w-7xl mx-auto border">
     <!-- https://api.whatsapp.com/send/?phone=+19253074213&text&type=phone_number -->
-    <a id="whatsapp-button" class="fixed bottom-10 right-10 z-10 rounded-full transition-transform transform hover:scale-110 limited-animation" href="https://api.whatsapp.com/send/?phone=19253074213&text&type=phone_number">
+    <a id="whatsapp-button" class="fixed bottom-8 lg:bottom-10 right-5 lg:right-10 z-10 rounded-full transition-transform transform hover:scale-110 limited-animation" href="https://api.whatsapp.com/send/?phone=19253074213&text&type=phone_number">
         
 
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="65" height="65" viewBox="0 0 65 65" xml:space="preserve">
@@ -90,7 +88,7 @@
     </header>
     <main>
         <section
-            class="text-center text-neutral-50 grid grid-cols-1 md:grid-cols-2 items-center px-8 py-10 gap-12 pb-20 border-b border-neutral-800">
+            class="text-center text-neutral-50 flex flex-col lg:flex-row items-center px-8 py-10 gap-12 pb-20 border-b border-neutral-800">
             <div id="text-content" class="text-left">
                 <h2 class="text-xl md:text-xl lg:text-2xl font-bold mb-4 uppercase tracking-wider">ALLTIME REPAIR</h2>
                 <h1 class="text-2xl md:text-2xl lg:text-4xl font-extrabold mb-4 leading-tight">24/7 Roadside Assistance for Trucks & Trailers</h1>
@@ -102,21 +100,21 @@
                 <div class="flex flex-wrap gap-4 mt-8">
                     <div data-animate class="flex items-center gap-2">
                         <span class="material-icons text-lime-500">build</span>
-                        <span class="text-lg">24/7 Emergency Repairs</span>
+                        <span class="text-md lg:text-lg">24/7 Emergency Repairs</span>
                     </div>
                     <div data-animate class="flex items-center gap-2">
                         <span class="material-icons text-lime-500">local_shipping</span>
-                        <span class="text-lg">Fleet Maintenance</span>
+                        <span class="text-md lg:text-lg">Fleet Maintenance</span>
                     </div>
                     <div data-animate class="flex items-center gap-2">
                         <span class="material-icons text-lime-500">engineering</span>
-                        <span class="text-lg">Certified Technicians</span>
+                        <span class="text-md lg:text-lg">Certified Technicians</span>
                     </div>
                 </div>
             </div>
             <div id="image-content" class="animate-fade-in-up flex justify-center items-center">
                 <img src="./hero.jpeg" alt="Placeholder Image"
-                    class="rounded-full w-full h-auto max-w-lg lg:w-[60%] border-l-2 border-b-2 border-lime-500 ">
+                    class="rounded-full w-full h-auto max-w-lg lg:w-[100%] border-l-2 border-b-2 border-lime-500 ">
             </div>
         </section>
         <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
@@ -163,25 +161,25 @@
                     <div class="flex flex-col justify-center items-center gap-8">
                         <div class="flex flex-col justify-center items-start gap-2">
                             <label class="text-white text-lg font-bold">Name</label>
-                            <input type="text" class="bg-neutral-800 text-white lg:w-100 w-80 px-4 py-2 rounded-sm" required>
+                            <input type="text" class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm" required>
                         </div>
                         <div class="flex flex-col justify-center items-start gap-2">
                             <label class="text-white text-lg font-bold">Email</label>
-                            <input type="text" class="bg-neutral-800 text-white lg:w-100 w-80 px-4 py-2 rounded-sm" required>
+                            <input type="text" class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm" required>
                         </div>                            
                         <div class="flex flex-col justify-center items-start gap-2">
                             <label class="text-white text-lg font-bold">Contact Number</label>
-                            <input type="text" class="bg-neutral-800 text-white lg:w-100 w-80 px-4 py-2 rounded-sm" required>
+                            <input type="text" class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm" required>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-center items-center gap-12">                            
+                    <div class="flex flex-col justify-center items-center gap-9">                            
                         <div class="flex flex-col justify-center items-start gap-2">
                             <label class="text-white text-lg font-bold">Company Name</label>
-                            <input type="text" class="bg-neutral-800 text-white lg:w-100 w-80 px-4 py-2 rounded-sm" required>
+                            <input type="text" class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm" required>
                         </div>
                         <div class="flex flex-col justify-center items-start gap-2">
                             <label class="text-white text-lg font-bold">Message</label>
-                            <textarea class="bg-neutral-800 text-white lg:w-100 w-80 px-4 py-2 rounded-sm" rows="5" required></textarea>
+                            <textarea class="bg-neutral-800 text-white text-lg lg:w-100 w-80 px-4 py-2 border border-neutral-500 rounded-sm" rows="6" required></textarea>
                         </div>
                     </div>                    
                 </div>
