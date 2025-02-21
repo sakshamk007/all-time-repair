@@ -14,6 +14,26 @@
 { title: "Suspension Repair", description: "We provide top-notch service to ensure your satisfaction." },
 { title: "Transmission Repair", description: "We provide top-notch service to ensure your satisfaction." }
 ]; %>
+
+<% const locations = [
+  {
+    name: "Oakland, CA",
+    imageUrl: ""
+  },
+  {
+    name: "Fremont, CA",
+    imageUrl: ""
+  },
+  {
+    name: "San Jose, CA",
+    imageUrl: ""
+  },
+  {
+    name: "Livermore, CA",
+    imageUrl: ""
+  }
+];
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,6 +83,8 @@
             animation-iteration-count: 6; 
             /* Change this number to the desired number of iterations */
         }
+
+        
     </style>
 </head>
 
@@ -93,7 +115,7 @@
                 <h2 class="text-xl md:text-xl lg:text-2xl font-bold mb-4 uppercase tracking-wider">ALLTIME REPAIR</h2>
                 <h1 class="text-2xl md:text-2xl lg:text-4xl font-extrabold mb-4 leading-tight">24/7 Roadside Assistance for Trucks & Trailers</h1>
                 <p class="text-xl md:text-xl lg:text-2xl mb-8 leading-relaxed">Broken down? Don't worry, we've got you covered! Fast, reliable and professional roadside assistance to keep your fleet moving.</p>
-                <a href="tel:+19253074213"
+                <a id="call-us-btn" href="tel:+19253074213"
                     class="text-neutral-50 font-black px-12 py-3 text-lg bg-lime-500 rounded-lg flex w-fit items-center hover:bg-lime-600 transition duration-300 transform hover:scale-105">
                     <span class="material-icons mr-2">phone</span>Call Us
                 </a>
@@ -117,12 +139,29 @@
                     class="rounded-full w-full h-auto max-w-lg lg:w-[100%] border-l-2 border-b-2 border-lime-500 ">
             </div>
         </section>
+
+        <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">Find Us At</h2>
+            <p class="text-md md:text-lg lg:text-xl leading-relaxed mb-8">We Currently serve here at our full force.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2  gap-8 mt-8 mx-5">
+                <% locations.forEach(location => { %>
+                    <div data-animate class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row h-52 group hover:cursor-pointer text-neutral-50" onclick="window.location.href='https://www.google.com/maps/place/<%= location.name.split(',')[0]  %>'"><div id="location-image" class="relative w-full h-full">
+                            <img src="./<%= location.name.split(",")[0].replace(/\s/g, "").toLowerCase() %>.jpeg" alt="<%= location.name %>" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black opacity-70 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-5xl font-bold text-inherit"><%= location.name %></h3>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+
+
         <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">Our Services</h2>
             <p class="text-md md:text-lg lg:text-xl leading-relaxed mb-8">Explore our full range of professional services designed to meet all your fleet needs.</p>
             <div class="grid grid-cols-1 lg:grid-cols-2  gap-8 mt-8 mx-5">
-
-            
                 <% services.forEach(service => { %>
                     <div data-animate class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
                         <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
@@ -134,7 +173,7 @@
                                 <p class="text-lg mt-2"><%= service.description %></p>
                             </div>
                             <div id="info-cta" class="mt-4 md:mt-0 text-center">
-                                <a href="#" class="block text-neutral-50 font-black w-full text-lg py-3 bg-lime-500 rounded-lg hover:bg-lime-600 transition duration-300 transform ">Learn More</a>
+                                <a href="#" class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform ">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -240,5 +279,38 @@
         observer.observe(element);
     });
 </script>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const callUsButton = document.getElementById("call-us-btn");
+      const initialOffset = callUsButton.offsetTop;
+      const minWidth = callUsButton.offsetWidth;
+      const scrollRange = 300; // Defines how quickly the button expands
+  
+      function handleScroll() {
+        const scrollY = window.scrollY;
+        const maxWidth = window.innerWidth; // Use viewport width
+  
+        if (scrollY > initialOffset) {
+          callUsButton.classList.add("fixed", "top-0", "left-0", "z-50", "text-center", "no-hover");
+  
+          let scrollFactor = Math.min((scrollY - initialOffset) / scrollRange, 1);
+          let newWidth = minWidth + (maxWidth - minWidth) * scrollFactor;
+  
+          callUsButton.style.width = `${Math.min(newWidth, maxWidth)}px`;
+          callUsButton.style.transition = "width 0.3s ease-out";
+        } else {
+          callUsButton.classList.remove("fixed", "top-0", "left-0", "z-50", "text-center", "no-hover");
+          callUsButton.style.width = "";
+        }
+      }
+  
+      window.addEventListener("scroll", handleScroll);
+    });
+  </script>
+  
+  
+  
+  
+  
+  
 </html>

@@ -20,13 +20,19 @@
             <!-- Navigation Links (Desktop) -->
             <div class="hidden md:flex md:items-center md:space-x-4">
                 <a href="/"
-                    class="text-lime-500 px-3 py-2 text-lg font-medium  hover:border-b-2 hover:border-lime-500 hover:pb-1 transition-colors ease-in ">Home</a>
+                    class="text-neutral-100 px-3 py-2 text-lg font-medium  hover:border-b-2 hover:border-lime-500 hover:pb-1 transition-colors ease-in " id="home">Home</a>
                 <a href="/services"
-                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1">Services</a>
+                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1" 
+                    id="services"
+                    >Services</a>
                 <a href="/about"
-                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1">About</a>
+                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                    id="about"
+                    >About</a>
                 <a href="/contact"
-                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1">Contact</a>
+                    class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                    id="contact"
+                    >Contact</a>
             </div>
         <!-- Contact Buttons -->
         <div class="hidden md:flex md:items-center md:space-x-4">
@@ -47,11 +53,15 @@
     <div id="mobile-menu" class="absolute top-40 left-0 w-full bg-neutral-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="/"
-                class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Home</a>
+            class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Home</a>
             <a href="/services"
-                class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Services</a>
+                class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100"
+
+                >Services</a>
             <a href="/about"
-                class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">About</a>
+                class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100"
+
+                >About</a>
             <a href="/contact"
                 class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Contact</a>
         </div>
@@ -85,4 +95,21 @@
             spans[2].classList.remove('-rotate-45', '-translate-y-[8.5px]');
         }
     });
+    document.addEventListener('DOMContentLoaded', ()=> {
+        const page = window.location.pathname;
+        const pageHeading = page.split('/');
+        switch(pageHeading[1]){
+            case '':
+                document.getElementById('home').classList.remove('text-neutral-100');
+                document.getElementById('home').classList.add('text-lime-500');
+                console.log(document.getElementById('home'))
+                break;
+            default:
+            document.getElementById(pageHeading[1]).classList.remove('text-neutral-100')
+                document.getElementById(pageHeading[1]).classList.add('text-lime-500');
+                console.log(document.getElementById(pageHeading[1]))
+                break;
+        }
+        console.log(pageHeading)
+    })
 </script>
