@@ -560,6 +560,9 @@
   .z-50 {
     z-index: 50;
   }
+  .m-3 {
+    margin: calc(var(--spacing) * 3);
+  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
@@ -616,6 +619,9 @@
   }
   .table {
     display: table;
+  }
+  .h-1\! {
+    height: calc(var(--spacing) * 1) !important;
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
