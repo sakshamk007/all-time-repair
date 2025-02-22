@@ -1,37 +1,37 @@
 <% const services = [
-{ title: "Brake Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Coolant System Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "DOT Inspection", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Diagnostics & Electrical Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Driveline Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "EGR & DPF Cleaning", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Engine Repair, Overhaul & Conversion", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Exhaust System Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "HVAC System Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Mobile Truck Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Oil & Fluid", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Preventive Maintenance", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Suspension Repair", description: "We provide top-notch service to ensure your satisfaction." },
-{ title: "Transmission Repair", description: "We provide top-notch service to ensure your satisfaction." }
+{ title: "Brake Repair", description: "Expert brake system repairs to ensure your vehicle stops safely and efficiently." },
+{ title: "Coolant System Repair", description: "Comprehensive coolant system services to prevent overheating and maintain engine performance." },
+{ title: "DOT Inspection", description: "Professional DOT inspections to ensure your vehicle meets all safety and regulatory standards." },
+{ title: "Diagnostics & Electrical Repair", description: "Advanced diagnostics and electrical system repairs to keep your vehicle running smoothly." },
+{ title: "Driveline Repair", description: "Specialized driveline services to address issues with your vehicle's drivetrain components." },
+{ title: "EGR & DPF Cleaning", description: "Thorough EGR and DPF cleaning services to improve engine efficiency and reduce emissions." },
+{ title: "Engine Repair, Overhaul & Conversion", description: "Complete engine repairs, overhauls, and conversions to restore or enhance performance." },
+{ title: "Exhaust System Repair", description: "Reliable exhaust system repairs to reduce emissions and improve vehicle performance." },
+{ title: "HVAC System Repair", description: "Expert HVAC system repairs to ensure your vehicle's heating and cooling systems function optimally." },
+{ title: "Mobile Truck Repair", description: "Convenient mobile repair services to address your truck's maintenance needs on the go." },
+{ title: "Oil & Fluid", description: "Professional oil and fluid services to keep your engine and other systems running smoothly." },
+{ title: "Preventive Maintenance", description: "Proactive maintenance services to prevent breakdowns and extend the life of your vehicle." },
+{ title: "Suspension Repair", description: "Comprehensive suspension repairs to ensure a smooth and stable ride." },
+{ title: "Transmission Repair", description: "Expert transmission repairs to keep your vehicle shifting smoothly and efficiently." }
 ]; %>
 
 <% const locations = [
-  {
-    name: "Oakland, CA",
-    imageUrl: ""
-  },
-  {
-    name: "Fremont, CA",
-    imageUrl: ""
-  },
-  {
-    name: "San Jose, CA",
-    imageUrl: ""
-  },
-  {
+    {
     name: "Livermore, CA",
     imageUrl: ""
-  }
+    },
+    {
+      name: "Fremont, CA",
+      imageUrl: ""
+    },
+    {
+        name: "Oakland, CA",
+        imageUrl: ""
+    },
+    {
+        name: "San Jose, CA",
+        imageUrl: ""
+    }
 ];
 %>
 <!DOCTYPE html>
@@ -40,9 +40,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <title>ALLTIME REPAIR</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
@@ -89,22 +89,6 @@
 </head>
 
 <body class="relative bg-neutral-950 max-w-7xl mx-auto border">
-    <!-- https://api.whatsapp.com/send/?phone=+19253074213&text&type=phone_number -->
-    <a id="whatsapp-button" class="fixed bottom-8 lg:bottom-10 right-5 lg:right-10 z-10 rounded-full transition-transform transform hover:scale-110 limited-animation" href="https://api.whatsapp.com/send/?phone=19253074213&text&type=phone_number">
-        
-
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="65" height="65" viewBox="0 0 65 65" xml:space="preserve">
-
-            <defs>
-            </defs>
-            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(3.5 3.5)
-            scale(.65 .65)" >
-                <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(124, 207, 0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-                <path d="M 16.138 44.738 c -0.002 5.106 1.332 10.091 3.869 14.485 l -4.112 15.013 l 15.365 -4.029 c 4.233 2.309 8.999 3.525 13.85 3.527 h 0.012 c 15.973 0 28.976 -12.999 28.983 -28.974 c 0.003 -7.742 -3.01 -15.022 -8.481 -20.498 c -5.472 -5.476 -12.749 -8.494 -20.502 -8.497 C 29.146 15.765 16.145 28.762 16.138 44.738 M 25.288 58.466 l -0.574 -0.911 c -2.412 -3.834 -3.685 -8.266 -3.683 -12.816 c 0.005 -13.278 10.811 -24.081 24.099 -24.081 c 6.435 0.003 12.482 2.511 17.031 7.062 c 4.548 4.552 7.051 10.603 7.05 17.037 C 69.205 58.036 58.399 68.84 45.121 68.84 h -0.009 c -4.323 -0.003 -8.563 -1.163 -12.261 -3.357 l -0.88 -0.522 l -9.118 2.391 L 25.288 58.466 z M 45.122 73.734 L 45.122 73.734 L 45.122 73.734 C 45.122 73.734 45.121 73.734 45.122 73.734" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path d="M 37.878 32.624 c -0.543 -1.206 -1.113 -1.23 -1.63 -1.251 c -0.422 -0.018 -0.905 -0.017 -1.388 -0.017 c -0.483 0 -1.268 0.181 -1.931 0.906 c -0.664 0.725 -2.535 2.477 -2.535 6.039 c 0 3.563 2.595 7.006 2.957 7.49 c 0.362 0.483 5.01 8.028 12.37 10.931 c 6.118 2.412 7.362 1.933 8.69 1.812 c 1.328 -0.121 4.285 -1.751 4.888 -3.442 c 0.604 -1.691 0.604 -3.14 0.423 -3.443 c -0.181 -0.302 -0.664 -0.483 -1.388 -0.845 c -0.724 -0.362 -4.285 -2.114 -4.948 -2.356 c -0.664 -0.241 -1.147 -0.362 -1.63 0.363 c -0.483 0.724 -1.87 2.355 -2.292 2.838 c -0.422 0.484 -0.845 0.544 -1.569 0.182 c -0.724 -0.363 -3.057 -1.127 -5.824 -3.594 c -2.153 -1.92 -3.606 -4.29 -4.029 -5.015 c -0.422 -0.724 -0.045 -1.116 0.318 -1.477 c 0.325 -0.324 0.724 -0.846 1.087 -1.268 c 0.361 -0.423 0.482 -0.725 0.723 -1.208 c 0.242 -0.483 0.121 -0.906 -0.06 -1.269 C 39.929 37.637 38.522 34.056 37.878 32.624" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-            </g>
-            </svg>
-    </a>
     <header>
         <%- include('../partials/header'); %>
     </header>
@@ -135,21 +119,21 @@
                 </div>
             </div>
             <div id="image-content" class="animate-fade-in-up flex justify-center items-center">
-                <img src="./hero.jpeg" alt="Placeholder Image"
-                    class="rounded-full w-full h-auto max-w-lg lg:w-[100%] border-l-2 border-b-2 border-lime-500 ">
+                <img src="./img/hero.jpeg" alt="Placeholder Image"
+                    class="rounded-full w-full h-auto max-w-lg lg:w-[110%] border-l-2 border-b-2 border-lime-500 ">
             </div>
         </section>
 
         <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">Find Us At</h2>
-            <p class="text-md md:text-lg lg:text-xl leading-relaxed mb-8">We Currently serve here at our full force.</p>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">OUR LOCATIONS</h2>
+            <p class="text-md md:text-lg lg:text-xl leading-relaxed mb-8">We currently serve here at our full force.</p>
             <div class="grid grid-cols-1 lg:grid-cols-2  gap-8 mt-8 mx-5">
                 <% locations.forEach(location => { %>
                     <div data-animate class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row h-52 group hover:cursor-pointer text-neutral-50" onclick="window.location.href='https://www.google.com/maps/place/<%= location.name.split(',')[0]  %>'"><div id="location-image" class="relative w-full h-full">
-                            <img src="./<%= location.name.split(",")[0].replace(/\s/g, "").toLowerCase() %>.jpeg" alt="<%= location.name %>" class="w-full h-full object-cover">
+                            <img src="./img/<%= location.name.split(",")[0].replace(/\s/g, "").toLowerCase() %>.jpg" alt="<%= location.name %>" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-black opacity-70 group-hover:opacity-30 transition-opacity duration-300"></div>
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <h3 class="text-5xl font-bold text-inherit"><%= location.name %></h3>
+                                <h3 class="text-4xl lg:text-5xl font-bold text-inherit"><%= location.name %></h3>
                             </div>
                         </div>
                     </div>
@@ -165,21 +149,19 @@
                 <% services.forEach(service => { %>
                     <div data-animate class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
                         <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
-                            <img src="./mechanic.jpeg" alt="<%= service.title %>" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                            <img src="./img/mechanic.jpeg" alt="<%= service.title %>" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
                         </div>
                         <div id="service-text" class="text-left p-4 flex flex-col  justify-end md:justify-between md:w-1/2 h-full gap-5">
                             <div id="info-head" class="text-center md:text-left">
                                 <h3 class="text-2xl font-bold mb-2"><%= service.title %></h3>
-                                <p class="text-lg mt-2"><%= service.description %></p>
+                                <p class="text-md mt-2"><%= service.description %></p>
                             </div>
                             <div id="info-cta" class="mt-4 md:mt-0 text-center">
                                 <a href="#" class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform ">Learn More</a>
                             </div>
                         </div>
                     </div>
-                <% }); %>
- 
-            
+                <% }); %>            
             </div>
         </section>
         <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
@@ -190,7 +172,7 @@
                     quality service and ensure your fleet is always on the road.</p>
             </div>
             <div class="flex justify-center items-center">
-                <img src="./certificate.png" alt="Commitment Image" class="w-full h-auto lg:w-[80%]">
+                <img src="./img/certificate.png" alt="Commitment Image" class="w-full h-auto lg:w-[80%]">
             </div>
         </section>
         <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
@@ -232,7 +214,7 @@
                 </a>
                 <a href="mailto:alltimerepair01@gmail.com"
                     class="text-neutral-100 px-5 py-2 text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
-                    <span class="material-icons mr-2">email</span>Message Us
+                    <span class="material-icons mr-2">email</span>Mail Us
                 </a>
             </div>
         </section>
@@ -243,15 +225,15 @@
     <footer class=" text-neutral-50 py-8 mt-4">
         <div class="max-w-7xl mx-auto px-8 flex flex-col gap-4 md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="./logo.png" alt="Company Logo" class="w-16 h-16 mr-4">
+                <img src="./img/logo.png" alt="Company Logo" class="w-16 h-16 mr-4">
                 <div>
                     <h3 class="text-2xl font-bold">ALLTIME REPAIR</h3>
                     <p class="text-sm">24/7 Roadside Assistance for Trucks & Trailers</p>
                 </div>
             </div>
             <div class="flex flex-row gap-8">
-                <a href="#"><img src="./instagram.svg" alt="instagram" class="h-[25px]"></a>
-                <a href="#"><img src="./facebook.svg" alt="facebook" class="h-[25px]"></a>
+                <a href="#"><img src="./img/instagram.svg" alt="instagram" class="h-[25px]"></a>
+                <a href="#"><img src="./img/facebook.svg" alt="facebook" class="h-[25px]"></a>
             </div>
             <div class="text-sm text-neutral-400 mt-4 md:mt-0">
                 <p>&copy; 2025 ALLTIME REPAIR. All rights reserved.</p>
@@ -278,39 +260,5 @@
     document.querySelectorAll('[data-animate]').forEach((element) => {
         observer.observe(element);
     });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const callUsButton = document.getElementById("call-us-btn");
-      const initialOffset = callUsButton.offsetTop;
-      const minWidth = callUsButton.offsetWidth;
-      const scrollRange = 300; // Defines how quickly the button expands
-  
-      function handleScroll() {
-        const scrollY = window.scrollY;
-        const maxWidth = window.innerWidth; // Use viewport width
-  
-        if (scrollY > initialOffset) {
-          callUsButton.classList.add("fixed", "top-0", "left-0", "z-50", "text-center", "no-hover");
-  
-          let scrollFactor = Math.min((scrollY - initialOffset) / scrollRange, 1);
-          let newWidth = minWidth + (maxWidth - minWidth) * scrollFactor;
-  
-          callUsButton.style.width = `${Math.min(newWidth, maxWidth)}px`;
-          callUsButton.style.transition = "width 0.3s ease-out";
-        } else {
-          callUsButton.classList.remove("fixed", "top-0", "left-0", "z-50", "text-center", "no-hover");
-          callUsButton.style.width = "";
-        }
-      }
-  
-      window.addEventListener("scroll", handleScroll);
-    });
-  </script>
-  
-  
-  
-  
-  
-  
+</script>  
 </html>
