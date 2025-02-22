@@ -7,6 +7,8 @@
     <title>ALLTIME REPAIR</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         @keyframes upDown {
             0% {
@@ -34,6 +36,64 @@
     <header>
         <%- include('../partials/header'); %>
     </header>
+    
+    <main class="mx-auto p-6 shadow-lg mt-4 rounded-lg">
+        <section>
+            <h2 class="text-2xl font-semibold text-lime-600 mb-4">Who We Are</h2>
+            <p class="text-white leading-relaxed">
+                At <span class="font-semibold">ALLTIME REPAIR</span>, we specialize in providing fast, efficient, and professional roadside repair services for truckers and fleet operators. Our team of expert mechanics is available around the clock to ensure that your trucks and trailers are back on the road with minimal downtime.
+            </p>
+        </section>
+        
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold text-lime-600 mb-4">Why Choose Us?</h2>
+            <ul class="list-disc pl-5 text-white space-y-2">
+                <li>24/7 Emergency Roadside Assistance</li>
+                <li>Experienced & Certified Technicians</li>
+                <li>On-Site Repairs to Minimize Downtime</li>
+                <li>Competitive Pricing & Transparent Estimates</li>
+                <li>Fully Equipped Service Vehicles</li>
+            </ul>
+        </section>
+        
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold text-lime-600 mb-4">Our Mission</h2>
+            <p class="text-white leading-relaxed">
+                Our mission is to provide truckers and logistics companies with reliable, high-quality repair services whenever they need them. We understand that time is money in the trucking industry, so we work diligently to get you back on the road as quickly and safely as possible.
+            </p>
+        </section>
+
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold text-lime-600 mb-4">Our Locations</h2>
+            <div id="map" class="w-auto h-[600px] rounded-md"></div>
+        </section>
+    </main>
+
+
+    <script>
+        // Initialize map and set view to a specific location
+        var map = L.map('map').setView([37.6819, -121.7680], 8); // San Francisco
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Array of locations
+        var locations = [
+            { coords: [37.8044, -122.2711], name: "Oakland, CA" },
+            { coords: [37.5485, -121.9886], name: "Fremont, CA" },
+            { coords: [37.3382, -121.8863], name: "San Jose, CA" },
+            { coords: [37.6819, -121.7680], name: "Livermore, CA" }
+        ];
+
+        // Add markers for each location
+        locations.forEach(location => {
+            L.marker(location.coords).addTo(map)
+                .bindPopup(`<b>${location.name}</b>`)
+                .openPopup();
+        });
+    </script>
     
 </body>
 </html>
