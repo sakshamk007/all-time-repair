@@ -20,7 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     <title>ALLTIME REPAIR</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -74,23 +74,25 @@
     </header>
 
     <section class="text-center text-neutral-50 px-8 py-10 gap-12">
-        <div class="grid grid-cols-1 lg:grid-cols-2  gap-8 mt-8 mx-5">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">Our Services</h2>
+        <p class="text-md md:text-lg lg:text-xl leading-relaxed mb-8">Explore our comprehensive range of professional services designed to meet all your fleet needs.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 mx-5">
             <% services.forEach(service => { %>
                 <div data-animate class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
                     <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
-                        <img src="./img/mechanic.jpeg" alt="<%= service.title %>" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                        <img src="/img/mechanic.jpeg" alt="<%= service.title %>" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
                     </div>
-                    <div id="service-text" class="text-left p-4 flex flex-col  justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="service-text" class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
                         <div id="info-head" class="text-center md:text-left">
-                            <h3 class="text-2xl font-bold mb-2"><%= service.title %></h3>
-                            <p class="text-md mt-2"><%= service.description %></p>
+                            <h3 class="text-2xl font-bold mb-4"><%= service.title %></h3>
+                            <p class="text-md leading-relaxed"><%= service.description %></p>
                         </div>
                         <div id="info-cta" class="mt-4 md:mt-0 text-center">
-                            <a href="#" class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform ">Learn More</a>
+                            <a href="/services/<%= service.title.toLowerCase().replace(/[,\s]/g, "-").replace(/and/g, "").split(" ").join("-") %>" class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn More</a>
                         </div>
                     </div>
                 </div>
-            <% }); %>            
+            <% }); %>
         </div>
     </section>
     

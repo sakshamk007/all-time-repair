@@ -5,11 +5,16 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
-    res.render('pages/index');
+    res.render('pages/home');
 });
 
 app.get('/services', function(req, res) {
     res.render('pages/services');
+});
+
+app.get('/services/:service', (req, res) => {
+    const service = req.params.service;
+    res.render(`services/${service}`);
 });
 
 app.get('/about', function(req, res) {
