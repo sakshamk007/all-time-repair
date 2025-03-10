@@ -1,18 +1,18 @@
 <% const services = [
-{ title: "Brake Repair", description: "Expert brake system repairs to ensure your vehicle stops safely and efficiently." },
-{ title: "Coolant System Repair", description: "Comprehensive coolant system services to prevent overheating and maintain engine performance." },
-{ title: "DOT Inspection", description: "Professional DOT inspections to ensure your vehicle meets all safety and regulatory standards." },
-{ title: "Diagnostics & Electrical Repair", description: "Advanced diagnostics and electrical system repairs to keep your vehicle running smoothly." },
-{ title: "Driveline Repair", description: "Specialized driveline services to address issues with your vehicle's drivetrain components." },
-{ title: "EGR & DPF Cleaning", description: "Thorough EGR and DPF cleaning services to improve engine efficiency and reduce emissions." },
-{ title: "Engine Repair, Overhaul & Conversion", description: "Complete engine repairs, overhauls, and conversions to restore or enhance performance." },
-{ title: "Exhaust System Repair", description: "Reliable exhaust system repairs to reduce emissions and improve vehicle performance." },
-{ title: "HVAC System Repair", description: "Expert HVAC system repairs to ensure your vehicle's heating and cooling systems function optimally." },
-{ title: "Mobile Truck Repair", description: "Convenient mobile repair services to address your truck's maintenance needs on the go." },
-{ title: "Oil & Fluid", description: "Professional oil and fluid services to keep your engine and other systems running smoothly." },
-{ title: "Preventive Maintenance", description: "Proactive maintenance services to prevent breakdowns and extend the life of your vehicle." },
-{ title: "Suspension Repair", description: "Comprehensive suspension repairs to ensure a smooth and stable ride." },
-{ title: "Transmission Repair", description: "Expert transmission repairs to keep your vehicle shifting smoothly and efficiently." }
+{ title: "Brake Repair", description: "Expert brake system repairs to ensure your vehicle stops safely and efficiently.", image: "/img/BrakeRepair.jpeg" },
+{ title: "Coolant System Repair", description: "Comprehensive coolant system services to prevent overheating and maintain engine performance.", image: "/img/CoolantSystemRepair.jpeg" },
+{ title: "DOT Inspection", description: "Professional DOT inspections to ensure your vehicle meets all safety and regulatory standards.", image: "/img/DotInspection.jpg" },
+{ title: "Diagnostics & Electrical Repair", description: "Advanced diagnostics and electrical system repairs to keep your vehicle running smoothly.", image: "/img/DiagnosticsAndElectricalRepairs.jpg" },
+{ title: "Driveline Repair", description: "Specialized driveline services to address issues with your vehicle's drivetrain components.", image: "/img/DrivelineRepair.jpg" },
+{ title: "EGR & DPF Cleaning", description: "Thorough EGR and DPF cleaning services to improve engine efficiency and reduce emissions.", image: "/img/EGRAndDPFCleaning.jpg" },
+{ title: "Engine Repair, Overhaul & Conversion", description: "Complete engine repairs, overhauls, and conversions to restore or enhance performance.", image: "/img/EngineRepair.jpg" },
+{ title: "Exhaust System Repair", description: "Reliable exhaust system repairs to reduce emissions and improve vehicle performance.", image: "/img/ExhaustSystemRepair.jpg" },
+{ title: "HVAC System Repair", description: "Expert HVAC system repairs to ensure your vehicle's heating and cooling systems function optimally.", image: "/img/HVACSystemRepair.jpg" },
+{ title: "Mobile Truck Repair", description: "Convenient mobile repair services to address your truck's maintenance needs on the go.", image: "/img/MobileTruckRepair.jpeg" },
+{ title: "Oil & Fluid", description: "Professional oil and fluid services to keep your engine and other systems running smoothly.", image: "/img/OilAndFluid.jpg" },
+{ title: "Preventive Maintenance", description: "Proactive maintenance services to prevent breakdowns and extend the life of your vehicle.", image: "/img/PreventiveMaintenance.jpg" },
+{ title: "Suspension Repair", description: "Comprehensive suspension repairs to ensure a smooth and stable ride.", image: "/img/SuspensionRepair.jpg" },
+{ title: "Transmission Repair", description: "Expert transmission repairs to keep your vehicle shifting smoothly and efficiently.", image: "/img/TransmissionRepair.jpg" }
 ]; %>
 
 <% const locations = [
@@ -149,7 +149,7 @@
                 <% services.forEach(service => { %>
                     <div data-animate class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
                         <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
-                            <img src="/img/mechanic.jpeg" alt="<%= service.title %>" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                            <img src="<%= service.image %>" alt="<%= service.title %>" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
                         </div>
                         <div id="service-text" class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
                             <div id="info-head" class="text-center md:text-left">
@@ -233,8 +233,8 @@
                 </div>
             </div>
             <div class="flex flex-row gap-8">
-                <a href="#"><img src="/img/instagram.svg" alt="instagram" class="h-[25px]"></a>
-                <a href="#"><img src="/img/facebook.svg" alt="facebook" class="h-[25px]"></a>
+                <a href="https://www.instagram.com/"><img src="/img/instagram.svg" alt="instagram" class="h-[25px]"></a>
+                <a href="https://www.facebook.com/"><img src="/img/facebook.svg" alt="facebook" class="h-[25px]"></a>
             </div>
             <div class="text-sm text-neutral-400 mt-4 md:mt-0">
                 <p>&copy; 2025 ALLTIME REPAIR. All rights reserved.</p>
