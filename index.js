@@ -1,28 +1,29 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const path = require('path');
 
-app.set('view engine', 'ejs');
+const app = express();
+
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
-    res.render('pages/home');
+    res.sendFile(path.join(__dirname, 'views/pages/home.html'));
 });
 
 app.get('/services', function(req, res) {
-    res.render('pages/services');
+    res.sendFile(path.join(__dirname, 'views/pages/services.html'));
 });
 
 app.get('/services/:service', (req, res) => {
     const service = req.params.service;
-    res.render(`services/${service}`);
+    res.sendFile(path.join(__dirname, `views/services/${service}.html`));
 });
 
 app.get('/about', function(req, res) {
-    res.render('pages/about');
+    res.sendFile(path.join(__dirname, 'views/pages/about.html'));
 });
 
 app.get('/contact', function(req, res) {
-    res.render('pages/contact');
+    res.sendFile(path.join(__dirname, 'views/pages/contact.html'));
 });
 
 app.listen(8080);

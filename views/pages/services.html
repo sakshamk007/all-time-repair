@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <title>ALLTIME REPAIR</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        /* Initially hide elements */
+        [data-animate] {
+            opacity: 0;
+        }
+
+        @keyframes upDown {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .limited-animation {
+            animation: upDown 2s infinite alternate;
+            animation-iteration-count: 6;
+            /* Change this number to the desired number of iterations */
+        }
+    </style>
+
+</head>
+
+<body class="relative bg-neutral-950 max-w-7xl mx-auto border">
+
+    <header>
+        <nav class="relative">
+            <div class="px-4 sm:px-6 lg:px-8 border-b border-neutral-800">
+                <div class="flex justify-between md:h-auto  ">
+
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/"
+                            class="text-xl font-bold text-green-800 transition duration-300 hover:text-green-600">
+                            <img src="/img/logo.png" alt="logo" class="md:w-24 md:h-24 h-20 w-20">
+                        </a>
+                    </div>
+
+                    <!-- Hamburger Menu (Mobile) -->
+                    <div class="flex items-center md:hidden mr-4">
+                        <label for="check"
+                            class="cursor-pointer flex flex-col gap-1.5 w-8 h-8 items-center justify-center">
+                            <input type="checkbox" id="check" class="hidden" />
+                            <span
+                                class="w-7 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300 origin-center"></span>
+                            <span class="w-5 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300"></span>
+                            <span
+                                class="w-7 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300 origin-center"></span>
+                        </label>
+                    </div>
+
+                    <!-- Navigation Links (Desktop) -->
+                    <div class="hidden md:flex md:items-center md:space-x-4">
+                        <a href="/"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium  hover:border-b-2 hover:border-lime-500 hover:pb-1 transition-colors ease-in "
+                            id="home">Home</a>
+                        <a href="/services"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                            id="services">Services</a>
+                        <a href="/about"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                            id="about">About</a>
+                        <a href="/contact"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                            id="contact">Contact</a>
+                    </div>
+
+                    <!-- Contact Buttons -->
+                    <div class="hidden md:flex md:items-center md:space-x-4">
+                        <a href="tel:+19253074213"
+                            class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
+                            <span class="material-icons mr-2">phone</span>Call Us
+                        </a>
+                        <a href="mailto:info@example.com"
+                            class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
+                            <span class="material-icons mr-2">email</span>Mail Us
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu"
+                class="absolute top-40 left-0 w-full bg-neutral-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="/"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Home</a>
+                    <a href="/services"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Services</a>
+                    <a href="/about"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">About</a>
+                    <a href="/contact"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <a id="call-button"
+            class="fixed h-14 w-14 flex justify-center items-center bottom-8 lg:bottom-10 right-5 lg:right-10 z-10 rounded-full transition-transform transform hover:scale-110 limited-animation bg-lime-500"
+            href="tel:+19253074213">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white"
+                stroke="white" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-phone">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+            </svg>
+        </a>
+    </header>
+
+    <section class="text-center text-neutral-50 px-8 py-10 mt-8 gap-12 border-b border-neutral-800">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-wider">Our Services</h2>
+        <p class="text-md md:text-lg lg:text-xl leading-relaxed mb-8">Explore our comprehensive range of
+            professional services designed to meet all your fleet needs.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 mx-5">
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/BrakeRepair.jpeg" alt="Brake Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Brake Repair</h3>
+                        <p class="text-md leading-relaxed">Expert brake system repairs to ensure your vehicle stops
+                            safely and efficiently.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="services/brake-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/CoolantSystemRepair.jpeg" alt="Coolant System Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Coolant System Repair</h3>
+                        <p class="text-md leading-relaxed">Comprehensive coolant system services to prevent
+                            overheating and maintain engine performance.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/coolant-system-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/DotInspection.jpg" alt="DOT Inspection"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">DOT Inspection</h3>
+                        <p class="text-md leading-relaxed">Professional DOT inspections to ensure your vehicle meets
+                            all safety and regulatory standards.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/dot-inspection"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/DiagnosticsAndElectricalRepairs.jpg" alt="Diagnostics & Electrical Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Diagnostics & Electrical Repair</h3>
+                        <p class="text-md leading-relaxed">Advanced diagnostics and electrical system repairs to
+                            keep your vehicle running smoothly.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/diagnostics-electrical-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/DrivelineRepair.jpg" alt="Driveline Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Driveline Repair</h3>
+                        <p class="text-md leading-relaxed">Specialized driveline services to address issues with
+                            your vehicle's drivetrain components.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/driveline-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/EGRAndDPFCleaning.jpg" alt="EGR & DPF Cleaning"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">EGR & DPF Cleaning</h3>
+                        <p class="text-md leading-relaxed">Thorough EGR and DPF cleaning services to improve engine
+                            efficiency and reduce emissions.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/egr-dpf-cleaning"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/EngineRepair.jpg" alt="Engine Repair, Overhaul & Conversion"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Engine Repair, Overhaul & Conversion</h3>
+                        <p class="text-md leading-relaxed">Complete engine repairs, overhauls, and conversions to
+                            restore or enhance performance.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/engine-repair-overhaul-conversion"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/ExhaustSystemRepair.jpg" alt="Exhaust System Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Exhaust System Repair</h3>
+                        <p class="text-md leading-relaxed">Reliable exhaust system repairs to reduce emissions and
+                            improve vehicle performance.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/exhaust-system-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/HVACSystemRepair.jpg" alt="HVAC System Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">HVAC System Repair</h3>
+                        <p class="text-md leading-relaxed">Expert HVAC system repairs to ensure your vehicle's
+                            heating and cooling systems function optimally.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/hvac-system-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/MobileTruckRepair.jpeg" alt="Mobile Truck Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Mobile Truck Repair</h3>
+                        <p class="text-md leading-relaxed">Convenient mobile repair services to address your truck's
+                            maintenance needs on the go.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/mobile-truck-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/OilAndFluid.jpg" alt="Oil & Fluid"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Oil & Fluid</h3>
+                        <p class="text-md leading-relaxed">Professional oil and fluid services to keep your engine
+                            and other systems running smoothly.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/oil-fluid"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/PreventiveMaintenance.jpg" alt="Preventive Maintenance"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Preventive Maintenance</h3>
+                        <p class="text-md leading-relaxed">Proactive maintenance services to prevent breakdowns and
+                            extend the life of your vehicle.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/preventive-maintenance"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/SuspensionRepair.jpg" alt="Suspension Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Suspension Repair</h3>
+                        <p class="text-md leading-relaxed">Comprehensive suspension repairs to ensure a smooth and
+                            stable ride.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/suspension-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div data-animate
+                class="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:h-72 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-lime-500">
+                <div id="service-image" class="relative w-full md:w-1/2 max-h-auto md:max-h-full">
+                    <img src="/img/TransmissionRepair.jpg" alt="Transmission Repair"
+                        class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none">
+                </div>
+                <div id="service-text"
+                    class="text-left p-4 flex flex-col justify-end md:justify-between md:w-1/2 h-full gap-5">
+                    <div id="info-head" class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Transmission Repair</h3>
+                        <p class="text-md leading-relaxed">Expert transmission repairs to keep your vehicle shifting
+                            smoothly and efficiently.</p>
+                    </div>
+                    <div id="info-cta" class="mt-4 md:mt-0 text-center">
+                        <a href="/services/transmission-repair"
+                            class="block text-lime-500 font-black w-full text-xl py-3 border border-lime-500 rounded-lg hover:bg-lime-600 hover:text-neutral-50 transition duration-300 transform">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Set up Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    entry.target.style.opacity = '1'; // Make element visible
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+        });
+
+        // Observe all elements with the `data-animate` attribute
+        document.querySelectorAll('[data-animate]').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const check = document.getElementById('check');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const spans = document.querySelectorAll('label span');
+
+        check.addEventListener('change', () => {
+            // Toggle mobile menu
+            if (check.checked) {
+                mobileMenu.classList.remove('max-h-0', 'opacity-0', 'scale-95');
+                mobileMenu.classList.add('max-h-screen', 'opacity-100', 'scale-100');
+            } else {
+                mobileMenu.classList.add('max-h-0', 'opacity-0', 'scale-95');
+                mobileMenu.classList.remove('max-h-screen', 'opacity-100', 'scale-100');
+            }
+
+            // Hamburger animation
+            if (check.checked) {
+                spans[0].classList.add('rotate-45', 'translate-y-[8.5px]');
+                spans[1].classList.add('opacity-0');
+                spans[2].classList.add('-rotate-45', '-translate-y-[8.5px]');
+            } else {
+                spans[0].classList.remove('rotate-45', 'translate-y-[8.5px]');
+                spans[1].classList.remove('opacity-0');
+                spans[2].classList.remove('-rotate-45', '-translate-y-[8.5px]');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const page = window.location.pathname;
+            const pageHeading = page.split('/');
+            switch (pageHeading[1]) {
+                case '':
+                    document.getElementById('home').classList.remove('text-neutral-100');
+                    document.getElementById('home').classList.add('text-lime-500');
+                    console.log(document.getElementById('home'))
+                    break;
+                default:
+                    document.getElementById(pageHeading[1]).classList.remove('text-neutral-100')
+                    document.getElementById(pageHeading[1]).classList.add('text-lime-500');
+                    console.log(document.getElementById(pageHeading[1]))
+                    break;
+            }
+            console.log(pageHeading)
+        })
+    </script>
+
+</body>
+
+</html>
