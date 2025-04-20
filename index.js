@@ -18,6 +18,10 @@ app.get('/services/:service', (req, res) => {
     res.sendFile(path.join(__dirname, `views/services/${service}.html`));
 });
 
+app.get('/book-service', (req, res) => {
+    res.sendFile(path.join(__dirname, `views/pages/bookService.html`));
+});
+
 app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname, 'views/pages/about.html'));
 });

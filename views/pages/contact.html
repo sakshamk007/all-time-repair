@@ -33,7 +33,7 @@
 
 </head>
 
-<body class="relative bg-neutral-950 max-w-7xl mx-auto border">
+<body class="relative bg-neutral-950 max-w-7xl mx-auto border border-black">
 
     <header>
         <nav class="relative">
@@ -41,11 +41,13 @@
                 <div class="flex justify-between md:h-auto  ">
 
                     <!-- Logo -->
-                    <div class="flex-shrink-0 flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-4">
                         <a href="/"
                             class="text-xl font-bold text-green-800 transition duration-300 hover:text-green-600">
-                            <img src="/img/logo.png" alt="logo" class="md:w-24 md:h-24 h-20 w-20">
+                            <img src="/img/logo.png" alt="logo" class="h-20 w-20">
                         </a>
+                        <h2 class="text-xl md:text-xl lg:text-2xl font-bold text-white uppercase tracking-wider">ALLTIME
+                            REPAIR</h2>
                     </div>
 
                     <!-- Hamburger Menu (Mobile) -->
@@ -83,9 +85,9 @@
                             class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
                             <span class="material-icons mr-2">phone</span>Call Us
                         </a>
-                        <a href="mailto:info@example.com"
+                        <a href="/book-service"
                             class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
-                            <span class="material-icons mr-2">email</span>Mail Us
+                            <span class="material-icons mr-2">event</span>Book Service
                         </a>
                     </div>
 
@@ -94,7 +96,7 @@
 
             <!-- Mobile Menu (Hidden by default) -->
             <div id="mobile-menu"
-                class="absolute top-40 left-0 w-full bg-neutral-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
+                class="absolute top-20 left-0 w-full bg-neutral-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="/"
                         class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Home</a>
@@ -121,7 +123,8 @@
         </a>
     </header>
 
-    <section class="text-center text-neutral-50 px-8 my-10 lg:mt-20 gap-12">
+    <section class="text-center text-neutral-50 p-8">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 uppercase tracking-wider">Contact Us</h2>
         <div class="flex items-center justify-center space-x-4 md:hidden">
             <a href="tel:+19253074213"
                 class="text-neutral-100 px-5 py-2 text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
@@ -137,19 +140,19 @@
             <div class="flex lg:flex-row flex-col justify-center items-center gap-8">
                 <div class="flex flex-col justify-center items-center gap-8">
                     <div class="flex flex-col justify-center items-start gap-2">
-                        <label class="text-white text-lg font-bold">Name</label>
+                        <label class="text-white text-lg font-bold">Full Name <span class="text-lime-500">*</span></label>
                         <input type="text"
                             class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm"
                             required>
                     </div>
                     <div class="flex flex-col justify-center items-start gap-2">
-                        <label class="text-white text-lg font-bold">Email</label>
+                        <label class="text-white text-lg font-bold">Email <span class="text-lime-500">*</span></label>
                         <input type="text"
                             class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm"
                             required>
                     </div>
                     <div class="flex flex-col justify-center items-start gap-2">
-                        <label class="text-white text-lg font-bold">Contact Number</label>
+                        <label class="text-white text-lg font-bold">Contact Number <span class="text-lime-500">*</span></label>
                         <input type="text"
                             class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm"
                             required>
@@ -157,13 +160,13 @@
                 </div>
                 <div class="flex flex-col justify-center items-center gap-9">
                     <div class="flex flex-col justify-center items-start gap-2">
-                        <label class="text-white text-lg font-bold">Company Name</label>
+                        <label class="text-white text-lg font-bold">Company Name <span class="text-lime-500">*</span></label>
                         <input type="text"
                             class="bg-neutral-800 text-white text-lg lg:w-100 w-80 lg:h-15 px-4 py-2 border border-neutral-500 rounded-sm"
                             required>
                     </div>
                     <div class="flex flex-col justify-center items-start gap-2">
-                        <label class="text-white text-lg font-bold">Message</label>
+                        <label class="text-white text-lg font-bold">Message <span class="text-lime-500">*</span></label>
                         <textarea
                             class="bg-neutral-800 text-white text-lg lg:w-100 w-80 px-4 py-2 border border-neutral-500 rounded-sm"
                             rows="6" required></textarea>

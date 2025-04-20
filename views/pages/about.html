@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="relative bg-neutral-950 max-w-7xl mx-auto border">
+<body class="relative bg-neutral-950 max-w-7xl mx-auto border border-black">
 
     <header>
         <nav class="relative">
@@ -43,11 +43,13 @@
                 <div class="flex justify-between md:h-auto  ">
 
                     <!-- Logo -->
-                    <div class="flex-shrink-0 flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-4">
                         <a href="/"
                             class="text-xl font-bold text-green-800 transition duration-300 hover:text-green-600">
-                            <img src="/img/logo.png" alt="logo" class="md:w-24 md:h-24 h-20 w-20">
+                            <img src="/img/logo.png" alt="logo" class="h-20 w-20">
                         </a>
+                        <h2 class="text-xl md:text-xl lg:text-2xl font-bold text-white uppercase tracking-wider">ALLTIME
+                            REPAIR</h2>
                     </div>
 
                     <!-- Hamburger Menu (Mobile) -->
@@ -85,9 +87,9 @@
                             class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
                             <span class="material-icons mr-2">phone</span>Call Us
                         </a>
-                        <a href="mailto:info@example.com"
+                        <a href="/book-service"
                             class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
-                            <span class="material-icons mr-2">email</span>Mail Us
+                            <span class="material-icons mr-2">event</span>Book Service
                         </a>
                     </div>
 
@@ -96,7 +98,7 @@
 
             <!-- Mobile Menu (Hidden by default) -->
             <div id="mobile-menu"
-                class="absolute top-40 left-0 w-full bg-neutral-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
+                class="absolute top-20 left-0 w-full bg-neutral-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="/"
                         class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Home</a>
@@ -127,7 +129,7 @@
 
         <section>
             <h2 class="text-2xl font-semibold text-lime-600 mb-4">Who We Are</h2>
-            <p class="text-white leading-relaxed">
+            <p class="text-white leading-relaxed text-lg">
                 At <span class="font-semibold">ALLTIME REPAIR</span>, we specialize in providing fast, efficient, and
                 professional roadside repair services for truckers and fleet operators. Our team of expert mechanics is
                 available around the clock to ensure that your trucks and trailers are back on the road with minimal
@@ -137,7 +139,7 @@
 
         <section class="mt-6">
             <h2 class="text-2xl font-semibold text-lime-600 mb-4">Why Choose Us</h2>
-            <ul class="list-disc pl-5 text-white space-y-2">
+            <ul class="list-disc pl-5 text-white space-y-2 text-lg">
                 <li>24/7 Emergency Roadside Assistance</li>
                 <li>Experienced & Certified Technicians</li>
                 <li>On-Site Repairs to Minimize Downtime</li>
@@ -153,7 +155,7 @@
 
         <section class="mt-6">
             <h2 class="text-2xl font-semibold text-lime-600 mb-4">Our Mission</h2>
-            <p class="text-white leading-relaxed">
+            <p class="text-white leading-relaxed text-lg">
                 Our mission is to provide truckers and logistics companies with reliable, high-quality repair services
                 whenever they need them. We understand that time is money in the trucking industry, so we work
                 diligently to get you back on the road as quickly and safely as possible.
@@ -164,7 +166,7 @@
 
     <script>
         // Initialize map and set view to a specific location
-        var map = L.map('map').setView([37.6819, -121.7680], 8); // San Francisco
+        var map = L.map('map').setView([37.6819, -121.7680], 8);
 
         // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -176,8 +178,10 @@
             { coords: [37.8044, -122.2711], name: "Oakland, CA" },
             { coords: [37.5485, -121.9886], name: "Fremont, CA" },
             { coords: [37.3382, -121.8863], name: "San Jose, CA" },
-            { coords: [37.6819, -121.7680], name: "Livermore, CA" }
+            { coords: [37.6819, -121.7680], name: "Livermore, CA" },
+            { coords: [37.7397, -121.4252], name: "Tracy, CA" }
         ];
+
 
         // Add markers for each location
         locations.forEach(location => {

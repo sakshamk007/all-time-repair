@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <title>Book Service | ALLTIME REPAIR</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @keyframes upDown {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .limited-animation {
+            animation: upDown 2s infinite alternate;
+            animation-iteration-count: 6;
+        }
+    </style>
+</head>
+
+<body class="relative bg-neutral-950 max-w-7xl mx-auto border border-black">
+    <header>
+        <nav class="relative">
+            <div class="px-4 sm:px-6 lg:px-8 border-b border-neutral-800">
+                <div class="flex justify-between md:h-auto  ">
+
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center gap-4">
+                        <a href="/"
+                            class="text-xl font-bold text-green-800 transition duration-300 hover:text-green-600">
+                            <img src="/img/logo.png" alt="logo" class="h-20 w-20">
+                        </a>
+                        <h2 class="text-xl md:text-xl lg:text-2xl font-bold text-white uppercase tracking-wider">ALLTIME
+                            REPAIR</h2>
+                    </div>
+
+                    <!-- Hamburger Menu (Mobile) -->
+                    <div class="flex items-center md:hidden mr-4">
+                        <label for="check"
+                            class="cursor-pointer flex flex-col gap-1.5 w-8 h-8 items-center justify-center">
+                            <input type="checkbox" id="check" class="hidden" />
+                            <span
+                                class="w-7 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300 origin-center"></span>
+                            <span class="w-5 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300"></span>
+                            <span
+                                class="w-7 h-[2.5px] bg-lime-500 rounded-full transition-all duration-300 origin-center"></span>
+                        </label>
+                    </div>
+
+                    <!-- Navigation Links (Desktop) -->
+                    <div class="hidden md:flex md:items-center md:space-x-4">
+                        <a href="/"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium  hover:border-b-2 hover:border-lime-500 hover:pb-1 transition-colors ease-in "
+                            id="home">Home</a>
+                        <a href="/services"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                            id="services">Services</a>
+                        <a href="/about"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                            id="about">About</a>
+                        <a href="/contact"
+                            class="text-neutral-100 px-3 py-2 text-lg font-medium hover:border-b-2 hover:border-lime-500 hover:pb-1"
+                            id="contact">Contact</a>
+                    </div>
+
+                    <!-- Contact Buttons -->
+                    <div class="hidden md:flex md:items-center md:space-x-4">
+                        <a href="tel:+19253074213"
+                            class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
+                            <span class="material-icons mr-2">phone</span>Call Us
+                        </a>
+                        <a href="/book-service"
+                            class="text-neutral-100 px-5 py-2 text-md lg:text-lg font-medium bg-neutral-800 rounded-sm hover:bg-lime-800 transition-colors flex items-center">
+                            <span class="material-icons mr-2">event</span>Book Service
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu"
+                class="absolute top-20 left-0 w-full bg-neutral-800 shadow-md md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out transform opacity-0 scale-95 z-50">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="/"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Home</a>
+                    <a href="/services"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Services</a>
+                    <a href="/about"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">About</a>
+                    <a href="/contact"
+                        class="block text-lime-600 hover:text-lime-400 px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:bg-gray-100">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <a id="call-button"
+            class="fixed h-14 w-14 flex justify-center items-center bottom-8 lg:bottom-10 right-5 lg:right-10 z-10 rounded-full transition-transform transform hover:scale-110 limited-animation bg-lime-500"
+            href="tel:+19253074213">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white"
+                stroke="white" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-phone">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+            </svg>
+        </a>
+    </header>
+
+    <section class="text-center text-neutral-50 p-8">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 uppercase tracking-wider">Book Service</h2>
+
+        <form id="serviceForm" action="#" method="POST"
+            class="space-y-4 flex flex-col items-center gap-4 max-w-4xl mx-auto">
+            <div class="flex flex-col gap-8 w-full">
+                <div class="flex md:flex-row flex-col md:gap-24 gap-4">
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Full Name <span
+                                class="text-lime-500">*</span></label>
+                        <input type="text" name="name"
+                            class="bg-neutral-800 text-white text-lg  px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-100 w-80"
+                            required>
+                    </div>
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Company Name <span
+                                class="text-lime-500">*</span></label>
+                        <input type="text" name="company"
+                            class="bg-neutral-800 text-white text-lg  px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-100 w-80"
+                            required>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col md:gap-24 gap-4">
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Contact Number <span
+                                class="text-lime-500">*</span></label>
+                        <input type="tel" name="phone"
+                            class="bg-neutral-800 text-white text-lg  px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-100 w-80"
+                            required>
+                    </div>
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Email <span class="text-lime-500">*</span></label>
+                        <input type="email" name="email"
+                            class="bg-neutral-800 text-white text-lg  px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-100 w-80"
+                            required>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col md:gap-24 gap-4">
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Vehicle Type <span
+                                class="text-lime-500">*</span></label>
+                        <input type="text" name="vehicle"
+                            class="bg-neutral-800 text-white text-lg  px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-100 w-80"
+                            placeholder="e.g., Semi Truck, Trailer, etc." required>
+                    </div>
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Service Needed <span
+                                class="text-lime-500">*</span></label>
+                        <select name="service"
+                            class="bg-neutral-800 text-white text-lg  p-[15px] border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-100 w-80"
+                            required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="Brake Repair">Brake Repair</option>
+                            <option value="Coolant System Repair">Coolant System Repair</option>
+                            <option value="DOT Inspection">DOT Inspection</option>
+                            <option value="Diagnostics & Electrical Repair">Diagnostics & Electrical Repair</option>
+                            <option value="Driveline Repair">Driveline Repair</option>
+                            <option value="EGR & DPF Cleaning">EGR & DPF Cleaning</option>
+                            <option value="Engine Repair, Overhaul & Conversion">Engine Repair, Overhaul & Conversion
+                            </option>
+                            <option value="Exhaust System Repair">Exhaust System Repair</option>
+                            <option value="HVAC System Repair">HVAC System Repair</option>
+                            <option value="Mobile Truck Repair">Mobile Truck Repair</option>
+                            <option value="Oil & Fluid">Oil & Fluid</option>
+                            <option value="Preventive Maintenance">Preventive Maintenance</option>
+                            <option value="Suspension Repair">Suspension Repair</option>
+                            <option value="Transmission Repair">Transmission Repair</option>
+                            <option value="Other">Other (Specify in message)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col md:gap-24 gap-4">
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Preferred Service Date <span
+                                class="text-lime-500">*</span></label>
+                        <input type="date" name="date"
+                            class="bg-neutral-800 text-white text-lg  px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-100 w-80"
+                            required>
+                    </div>
+                    <div class="flex flex-col justify-center items-start gap-2">
+                        <label class="text-white text-lg font-bold">Location <span
+                                class="text-lime-500">*</span></label>
+                        <div class="flex gap-2 w-full">
+                            <input type="text" id="location" name="location"
+                                class="bg-neutral-800 text-white text-lg  px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500 lg:w-85 w-65"
+                                placeholder="Your current location" required>
+                            <button type="button" id="getLocation"
+                                class="bg-neutral-700 text-white px-4 rounded-sm hover:bg-lime-600 transition flex items-center">
+                                <span class="material-icons">my_location</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <div class="flex flex-col justify-center items-start gap-2 w-full">
+                    <label class="text-white text-lg font-bold">Service Description <span
+                            class="text-lime-500">*</span></label>
+                    <textarea name="message"
+                        class="bg-neutral-800 text-white text-lg w-full px-4 py-3 border border-neutral-500 rounded-sm focus:border-lime-500 focus:ring-1 focus:ring-lime-500"
+                        rows="5" required placeholder="Describe your issue in detail..."></textarea>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 mb-20">
+                <button type="submit"
+                    class="md:w-50 w-40 bg-lime-600 text-white font-bold py-3 md:px-6 px-3 md:text-md text-sm rounded-sm hover:bg-lime-700 transition flex items-center justify-center gap-2">
+                    <span class="material-icons">send</span> Submit Request
+                </button>
+                <button type="reset"
+                    class="md:w-48 w-40 bg-neutral-800 text-white font-bold py-3 md:px-6 px-3 md:text-md text-sm rounded-sm hover:bg-neutral-700 transition flex items-center justify-center gap-2">
+                    <span class="material-icons">clear</span> Reset Form
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Hamburger Menu Toggle
+        const check = document.getElementById('check');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const spans = document.querySelectorAll('label span');
+
+        check.addEventListener('change', () => {
+            // Toggle mobile menu
+            if (check.checked) {
+                mobileMenu.classList.remove('max-h-0', 'opacity-0', 'scale-95');
+                mobileMenu.classList.add('max-h-screen', 'opacity-100', 'scale-100');
+            } else {
+                mobileMenu.classList.add('max-h-0', 'opacity-0', 'scale-95');
+                mobileMenu.classList.remove('max-h-screen', 'opacity-100', 'scale-100');
+            }
+
+            // Hamburger animation
+            if (check.checked) {
+                spans[0].classList.add('rotate-45', 'translate-y-[8.5px]');
+                spans[1].classList.add('opacity-0');
+                spans[2].classList.add('-rotate-45', '-translate-y-[8.5px]');
+            } else {
+                spans[0].classList.remove('rotate-45', 'translate-y-[8.5px]');
+                spans[1].classList.remove('opacity-0');
+                spans[2].classList.remove('-rotate-45', '-translate-y-[8.5px]');
+            }
+        });
+
+        // Geolocation Functionality
+        document.getElementById('getLocation').addEventListener('click', function () {
+            const locationInput = document.getElementById('location');
+
+            if (navigator.geolocation) {
+                this.innerHTML = '<span class="material-icons animate-spin">sync</span>';
+                this.disabled = true;
+
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        // Success callback
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+
+                        // Use a geocoding service to get address (here using Nominatim as an example)
+                        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                let address = '';
+                                if (data.address) {
+                                    if (data.address.road) address += data.address.road + ', ';
+                                    if (data.address.city) address += data.address.city + ', ';
+                                    if (data.address.state) address += data.address.state + ', ';
+                                    if (data.address.postcode) address += data.address.postcode;
+                                }
+
+                                if (address) {
+                                    locationInput.value = address;
+                                } else {
+                                    locationInput.value = `Lat: ${latitude.toFixed(4)}, Long: ${longitude.toFixed(4)}`;
+                                }
+
+                                document.getElementById('getLocation').innerHTML = '<span class="material-icons">my_location</span>';
+                                document.getElementById('getLocation').disabled = false;
+                            })
+                            .catch(error => {
+                                console.error('Geocoding error:', error);
+                                locationInput.value = `Lat: ${latitude.toFixed(4)}, Long: ${longitude.toFixed(4)}`;
+                                document.getElementById('getLocation').innerHTML = '<span class="material-icons">my_location</span>';
+                                document.getElementById('getLocation').disabled = false;
+                            });
+                    },
+                    function (error) {
+                        // Error callback
+                        let errorMessage = "Unable to retrieve your location";
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMessage = "Location access was denied";
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMessage = "Location information is unavailable";
+                                break;
+                            case error.TIMEOUT:
+                                errorMessage = "The request to get location timed out";
+                                break;
+                        }
+
+                        alert(errorMessage);
+                        document.getElementById('getLocation').innerHTML = '<span class="material-icons">my_location</span>';
+                        document.getElementById('getLocation').disabled = false;
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        });
+
+        // Form Submission
+        document.getElementById('serviceForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Here you would typically send the form data to your server
+            // For demo purposes, we'll just show an alert
+            alert('Service request submitted successfully! We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
